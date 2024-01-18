@@ -1,0 +1,14 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "resourceMapping",
+    "name": "oktadev_oag_cluster_entity_mapping",
+    "displayName": "Resource mapping configuration for the oktadev:oag_cluster entity",
+    "entityType": "oktadev:oag_cluster",
+    "scopeFilter": "containsAll(resourceAttributes, ['oktadev.oag_cluster.cluster_name'])",
+    "attributeNameMappings": {
+        "cluster_name": "oktadev.oag_cluster.cluster_name"
+    }
+}

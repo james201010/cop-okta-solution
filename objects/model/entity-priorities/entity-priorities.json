@@ -1,0 +1,22 @@
+[
+    {
+        "namespace": {
+            "name": "oktadev",
+            "version": 1
+        },
+        "kind": "entityPriority",
+        "name": "oktadev_entity_priorities",
+        "displayName": "oktadev Entity Priorities",
+        "description": "oktadev Entity Priorities",
+        "scopeFilter": "'oktadev'.equals(source)",
+        "entityPriorityOrder": {
+            "oktadev:oag_cluster": "1",
+            "oktadev:oag_node": "2",
+            "oktadev:oag_engine": "3",
+            "oktadev:oag_cpu": "4",
+            "oktadev:oag_memory": "5",
+            "oktadev:oag_disk": "6",
+            "oktadev:oag_nic": "7"    
+        }
+    }
+]

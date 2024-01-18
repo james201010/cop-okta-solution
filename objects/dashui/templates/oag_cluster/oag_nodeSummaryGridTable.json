@@ -1,0 +1,102 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_nodeSummaryGridTable",
+    "target": "oktadev:oag_cluster",
+    "view": "default",
+    "element": {
+      "instanceOf": "grid",
+      "rowSets": {
+        "nodes": {
+          "path": "out(common:has).to(oktadev:oag_node)"
+        }      
+      },
+      "mode": "client",
+      "sortable": "true",
+      "columns": [
+        {
+          "label": "Host Name",
+          "flex": 0,
+          "width": 400,
+          "sortable": true,
+          "cell": {
+                "nodes": {
+                    "instanceOf": "string",
+                    "path": ["attributes(host_name)", "id"]
+                }
+          } 
+        },  
+        {
+          "label": "IP Address",
+          "flex": 0,
+          "width": 200,
+          "sortable": true,
+          "cell": {
+                "nodes": {
+                    "instanceOf": "string",
+                    "path": ["attributes(ip_address)", "id"]
+                }
+          } 
+        },  
+        {
+            "cell": {
+            "nodes": {
+              "instanceOf": "count",
+                 "mode": "data",
+                 "aggregatePath": "out(common:has).to(oktadev:oag_node).out(common:has).to(oktadev:oag_engine)"
+              } 
+            },      
+            "flex": 0,
+            "label": "Total # Node Engines"
+        },
+        {
+          "cell": {
+          "nodes": {
+            "instanceOf": "count",
+               "mode": "data",
+               "aggregatePath": "out(common:has).to(oktadev:oag_node).out(common:has).to(oktadev:oag_memory)"
+            } 
+          },      
+          "flex": 0,
+          "label": "Total # Node Memory"
+        },
+        {
+            "cell": {
+            "nodes": {
+              "instanceOf": "count",
+                 "mode": "data",
+                 "aggregatePath": "out(common:has).to(oktadev:oag_node).out(common:has).to(oktadev:oag_cpu)"
+              } 
+            },      
+            "flex": 0,
+            "label": "Total # Node CPUs"
+        }, 
+        {
+            "cell": {
+            "nodes": {
+              "instanceOf": "count",
+                 "mode": "data",
+                 "aggregatePath": "out(common:has).to(oktadev:oag_node).out(common:has).to(oktadev:oag_disk)"
+              } 
+            },      
+            "flex": 0,
+            "label": "Total # Node Disks"
+        },    
+        {
+            "cell": {
+            "nodes": {
+              "instanceOf": "count",
+                 "mode": "data",
+                 "aggregatePath": "out(common:has).to(oktadev:oag_node).out(common:has).to(oktadev:oag_nic)"
+              } 
+            },      
+            "flex": 0,
+            "label": "Total # Networks"
+        }                    
+      ],
+      "onRowSingleClick": {
+        "type": "common.focusEntity",
+        "expression": "{ \"id\": $params.key }"
+      }      
+    }
+  }
+  

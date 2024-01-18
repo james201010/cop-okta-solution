@@ -1,0 +1,15 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "resourceMapping",
+    "name": "oktadev_oag_memory_entity_mapping",
+    "displayName": "Resource mapping configuration for the oktadev:oag_memory entity",
+    "entityType": "oktadev:oag_memory",
+    "scopeFilter": "containsAll(resourceAttributes, ['oktadev.oag_memory.host_name', 'oktadev.oag_memory.ip_address'])",
+    "attributeNameMappings": {
+        "host_name": "oktadev.oag_memory.host_name",
+        "ip_address": "oktadev.oag_memory.ip_address"
+    }
+}

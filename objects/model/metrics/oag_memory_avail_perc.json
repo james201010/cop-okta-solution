@@ -1,0 +1,15 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "metric",
+    "name": "oag_memory_avail_perc",
+    "displayName": "oag_memory_avail_perc",
+    "category": "current",
+    "contentType": "gauge",
+    "aggregationTemporality": "unspecified",
+    "isMonotonic": false,
+    "type": "double",
+    "unit": ""
+}

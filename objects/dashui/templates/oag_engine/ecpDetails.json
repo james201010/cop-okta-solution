@@ -1,0 +1,15 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpDetails",
+    "target": "oktadev:oag_engine",
+    "view": "default",
+    "element": {
+        "instanceOf": "ocpSingle",
+        "elements": [
+            {
+                "instanceOf": "oktadev:oag_engineDetailsList"
+            }
+        ],
+        "nameAttribute": "host_name"
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "entity",
+    "name": "oag_engine",
+    "displayName": "oag_engine",
+    "attributeDefinitions": {
+        "required": [
+            "host_name", "ip_address"
+        ],
+        "optimized": ["host_name", "ip_address"],
+        "attributes": {
+            "host_name": {
+                "type": "string",
+                "description": "The host name of the oag_engine"
+            },
+            "ip_address": {
+                "type": "string",
+                "description": "The ip address of the oag_engine"
+            }
+        }
+    },
+    "lifecycleConfiguration": {
+        "purgeTtlInMinutes": 200,
+        "retentionTtlInMinutes": 116
+    },
+    "metricTypes": [
+        "oktadev:oag_nginx_active_conns",
+        "oktadev:oag_nginx_handled_conns",
+        "oktadev:oag_nginx_total_requests",
+        "oktadev:oag_nginx_waiting_conns",
+        "oktadev:oag_nginx_accepted_conns",
+        "oktadev:oag_promhttp_metric_handler_requests_200",
+        "oktadev:oag_promhttp_metric_handler_requests_500",
+        "oktadev:oag_promhttp_metric_handler_requests_503",
+        "oktadev:oag_promhttp_metric_handler_errs_encode",
+        "oktadev:oag_promhttp_metric_handler_errs_gather"
+    ]
+}

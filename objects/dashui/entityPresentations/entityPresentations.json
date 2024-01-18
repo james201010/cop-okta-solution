@@ -1,0 +1,79 @@
+[
+    {
+        "kind": "entityPresentation",
+        "entityType": "oktadev:oag_cluster",
+        "names": [
+            "Okta Cluster",
+            "Okta Cluster",
+            "Okta Clusters"
+        ],
+        "displayNameAttribute": "oag_cluster.display_name",
+        "breadcrumbPreferredParentEntityType": "oktadev:oag_cluster"
+    },
+    {
+        "kind": "entityPresentation",
+        "entityType": "oktadev:oag_node",
+        "names": [
+            "Cluster Node",
+            "Cluster Node",
+            "Cluster Nodes"
+        ],
+        "displayNameAttribute": "oag_node.display_name",
+        "breadcrumbPreferredParentEntityType": "oktadev:oag_cluster"
+    },
+    {
+        "kind": "entityPresentation",
+        "entityType": "oktadev:oag_engine",
+        "names": [
+            "Node Engine",
+            "Node Engine",
+            "Node Engines"
+        ],
+        "displayNameAttribute": "oag_engine.display_name",
+        "breadcrumbPreferredParentEntityType": "oktadev:oag_engine"
+    },
+    {
+        "kind": "entityPresentation",
+        "entityType": "oktadev:oag_cpu",
+        "names": [
+            "Node CPU",
+            "Node CPU",
+            "Node CPUs"
+        ],
+        "displayNameAttribute": "oag_cpu.display_name",
+        "breadcrumbPreferredParentEntityType": "oktadev:oag_cpu"
+    },
+    {
+        "kind": "entityPresentation",
+        "entityType": "oktadev:oag_memory",
+        "names": [
+            "Node Memory",
+            "Node Memory",
+            "Node Memory"
+        ],
+        "displayNameAttribute": "oag_memory.display_name",
+        "breadcrumbPreferredParentEntityType": "oktadev:oag_memory"
+    },
+    {
+        "kind": "entityPresentation",
+        "entityType": "oktadev:oag_disk",
+        "names": [
+            "Node Disk",
+            "Node Disk",
+            "Node Disks"
+        ],
+        "displayNameAttribute": "oag_disk.display_name",
+        "breadcrumbPreferredParentEntityType": "oktadev:oag_disk"
+    },
+    {
+        "kind": "entityPresentation",
+        "entityType": "oktadev:oag_nic",
+        "names": [
+            "Node Network",
+            "Node Network",
+            "Node Network"
+        ],
+        "displayNameAttribute": "oag_nic.display_name",
+        "breadcrumbPreferredParentEntityType": "oktadev:oag_nic"
+    }
+]

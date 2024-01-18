@@ -1,0 +1,332 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_engineDetailsList",
+    "target": "oktadev:oag_engine",
+    "view": "default",
+    "element": {
+        "instanceOf": "html",
+        "elements": [
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Active Connections"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_nginx_active_conns"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_nginx_active_conns",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Handled Connections"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_nginx_handled_conns"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_nginx_handled_conns",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Total Requests"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_nginx_total_requests"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_nginx_total_requests",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Waiting Connections"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_nginx_waiting_conns"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_nginx_waiting_conns",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Accepted Connections"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_nginx_accepted_conns"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_nginx_accepted_conns",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "HTTP 200 Requests"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_requests_200"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_requests_200",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "HTTP 500 Requests"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_requests_500"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_requests_500",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "HTTP 503 Requests"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_requests_503"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_requests_503",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Metric Handler Errorrs Encode"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_errs_encode"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_errs_encode",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Metric Handler Errorrs Gather"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_errs_gather"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_promhttp_metric_handler_errs_gather",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": {
+                    "name": "logsWidget"
+                },
+                "source": "derived_metric"
+            }
+        ],
+        "style": {
+            "display": "flex",
+            "flexDirection": "column",
+            "gap": 12
+        }
+    }
+}

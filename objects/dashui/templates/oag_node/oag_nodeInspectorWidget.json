@@ -1,0 +1,102 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_nodeInspectorWidget",
+    "target": "oktadev:oag_node",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": {
+            "instanceOf": {
+                "name": "inspectorWidget"
+            },
+            "elements": {
+                "instanceOf": {
+                    "name": "properties"
+                },
+                "elements": [
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Service Instance ID"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(service_instance_id)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Service Name"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(service_name)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "HTTP Scheme"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(http_scheme)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Is Master Node"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(is_master_node)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Host Name"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(host_name)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "IP Address"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(ip_address)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Cluster Name"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(cluster_name)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Net Host Port"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(net_host_port)"
+                        }
+                    }
+                ]
+            },
+            "title": "Properties"
+        }
+    }
+}

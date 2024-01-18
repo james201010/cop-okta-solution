@@ -1,0 +1,38 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "entity",
+    "name": "oag_nic",
+    "displayName": "oag_nic",
+    "attributeDefinitions": {
+        "required": [
+            "host_name", "ip_address", "device_name"
+        ],
+        "optimized": ["host_name", "ip_address", "device_name"],
+        "attributes": {
+            "host_name": {
+                "type": "string",
+                "description": "The host name of the oag_nic"
+            },
+            "ip_address": {
+                "type": "string",
+                "description": "The ip address of the oag_nic"
+            },
+            "device_name": {
+                "type": "string",
+                "description": "The device name of the oag_nic"
+            }
+        }
+    },
+    "lifecycleConfiguration": {
+        "purgeTtlInMinutes": 200,
+        "retentionTtlInMinutes": 116
+    },
+    "metricTypes": [
+        "oktadev:oag_network_receive_drop",
+        "oktadev:oag_network_receive_errs",
+        "oktadev:oag_network_receive_bytes"
+    ] 
+}

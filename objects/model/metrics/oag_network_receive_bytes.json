@@ -1,0 +1,15 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "metric",
+    "name": "oag_network_receive_bytes",
+    "displayName": "oag_network_receive_bytes",
+    "category": "current",
+    "contentType": "gauge",
+    "aggregationTemporality": "unspecified",
+    "isMonotonic": false,
+    "type": "double",
+    "unit": "{bytes}"
+}

@@ -1,0 +1,15 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "metric",
+    "name": "oag_filesystem_free_bytes",
+    "displayName": "oag_filesystem_free_bytes",
+    "category": "current",
+    "contentType": "gauge",
+    "aggregationTemporality": "unspecified",
+    "isMonotonic": false,
+    "type": "double",
+    "unit": "{bytes}"
+}

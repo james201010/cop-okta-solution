@@ -1,0 +1,70 @@
+{
+    "kind": "templatePropsExtension",
+    "id": "oktadev:oktadevEcpHomeExtension",
+    "name": "dashui:ecpHome",
+    "view": "default",
+    "target": "*",
+    "requiredEntityTypes": [
+        "oktadev:oag_cluster",
+        "oktadev:oag_cpu",
+        "oktadev:oag_disk",
+        "oktadev:oag_engine",
+        "oktadev:oag_memory",
+        "oktadev:oag_nic",
+        "oktadev:oag_node"
+    ],
+    "props": {
+        "sections": [
+            {
+                "index": 6,
+                "name": "oktadevCoreSection",
+                "title": "Okta Observability"
+            }
+        ],
+        "entities": [
+            {
+                "index": 0,
+                "section": "oktadevCoreSection",
+                "entityAttribute": "cluster_name",
+                "targetType": "oktadev:oag_cluster"
+            },
+            {
+                "index": 1,
+                "section": "oktadevCoreSection",
+                "entityAttribute": "host_name",
+                "targetType": "oktadev:oag_node"
+            } ,
+            {
+                "index": 2,
+                "section": "oktadevCoreSection",
+                "entityAttribute": "host_name",
+                "targetType": "oktadev:oag_engine"
+            },
+            {
+                "index": 3,
+                "section": "oktadevCoreSection",
+                "entityAttribute": "host_name",
+                "targetType": "oktadev:oag_memory"
+            },                                  
+            {
+                "index": 4,
+                "section": "oktadevCoreSection",
+                "entityAttribute": "cpu_id",
+                "targetType": "oktadev:oag_cpu"
+            },
+            {
+                "index": 5,
+                "section": "oktadevCoreSection",
+                "entityAttribute": "device_path",
+                "targetType": "oktadev:oag_disk"
+            },
+            {
+                "index": 6,
+                "section": "oktadevCoreSection",
+                "entityAttribute": "device_name",
+                "targetType": "oktadev:oag_nic"
+            }
+
+        ]
+    }
+}

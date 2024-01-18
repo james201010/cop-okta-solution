@@ -1,0 +1,22 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "resourceMapping",
+    "name": "oktadev_oag_node_entity_mapping",
+    "displayName": "Resource mapping configuration for the oktadev:oag_node entity",
+    "entityType": "oktadev:oag_node",
+    "scopeFilter": "containsAll(resourceAttributes, ['oktadev.oag_node.host_name', 'oktadev.oag_node.ip_address', 'oktadev.oag_node.cluster_name'])",
+    "attributeNameMappings": {
+        "cluster_name": "oktadev.oag_node.cluster_name",
+        "host_name": "oktadev.oag_node.host_name",
+        "http_scheme": "oktadev.oag_node.http_scheme",
+        "ip_address": "oktadev.oag_node.ip_address",
+        "is_master_node": "oktadev.oag_node.is_master_node",
+        "net_host_port": "oktadev.oag_node.net_host_port",
+        "service_instance_id": "oktadev.oag_node.service_instance_id",
+        "service_name": "oktadev.oag_node.service_name",
+        "number_of_cpus": "oktadev.oag_node.number_of_cpus"
+    }
+}

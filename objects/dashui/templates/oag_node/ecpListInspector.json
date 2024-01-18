@@ -1,0 +1,33 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpListInspector",
+    "target": "oktadev:oag_node",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": [
+            {
+                "instanceOf": "focusedEntities",
+                "element": {
+                    "instanceOf": {
+                        "name": "nameWidget"
+                    },
+                    "path": [
+                        "attributes(host_name)",
+                        "id"
+                    ]
+                },
+                "mode": "SINGLE"
+            },
+            {
+                "instanceOf": "focusedEntities",
+                "element": {
+                    "instanceOf": {
+                        "name": "oktadev:oag_nodeInspectorWidget"
+                    }
+                },
+                "mode": "SINGLE"
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "kind": "template",
+    "name": "dashui:name",
+    "target": "oktadev:oag_memory",
+    "view": "default",
+    "element": {
+        "instanceOf": "string",
+        "path": [
+            "attributes(host_name)",
+            "id"
+        ]
+    }
+}

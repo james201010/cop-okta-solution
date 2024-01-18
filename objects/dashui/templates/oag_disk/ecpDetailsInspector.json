@@ -1,0 +1,19 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpDetailsInspector",
+    "target": "oktadev:oag_disk",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": [
+            {
+                "instanceOf": {
+                    "name": "alerting"
+                }
+            },
+            {
+                "instanceOf": "oktadev:oag_diskInspectorWidget"
+            }
+        ]
+    }
+}

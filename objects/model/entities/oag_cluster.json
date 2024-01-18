@@ -1,0 +1,33 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "entity",
+    "name": "oag_cluster",
+    "displayName": "oag_cluster",
+    "attributeDefinitions": {
+        "required": [
+            "cluster_name"
+        ],
+        "optimized": ["cluster_name"],
+        "attributes": {
+            "cluster_name": {
+                "type": "string",
+                "description": "The cluster name of the oag_cluster"
+            }
+        }
+    },
+    "lifecycleConfiguration": {
+        "purgeTtlInMinutes": 200,
+        "retentionTtlInMinutes": 116
+    },
+    "metricTypes": [
+        "oktadev:oag_cluster_heartbeat"
+    ],
+    "associationTypes": {
+        "common:has": [            
+            "oktadev:oag_node"
+        ]
+    }
+}

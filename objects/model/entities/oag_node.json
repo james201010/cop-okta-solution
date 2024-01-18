@@ -1,0 +1,70 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "entity",
+    "name": "oag_node",
+    "displayName": "oag_node",
+    "attributeDefinitions": {
+        "required": [
+           "host_name", "ip_address", "cluster_name"
+        ],
+        "optimized": ["host_name", "ip_address", "cluster_name", "net_host_port", "service_instance_id", "service_name", "http_scheme", "is_master_node"],
+        "attributes": {
+            "host_name": {
+                "type": "string",
+                "description": "The host name of the oag_node"
+            },
+            "ip_address": {
+                "type": "string",
+                "description": "The ip address of the oag_node"
+            },
+            "cluster_name": {
+                "type": "string",
+                "description": "The cluster name of the oag_node"
+            },
+            "net_host_port": {
+                "type": "string",
+                "description": "The net host port of the oag_node"
+            },
+            "service_instance_id": {
+                "type": "string",
+                "description": "The service instance identifier of the oag_node"
+            },
+            "service_name": {
+                "type": "string",
+                "description": "The service name of the oag_node"
+            },
+            "http_scheme": {
+                "type": "string",
+                "description": "The http scheme of the oag_node"
+            },
+            "is_master_node": {
+                "type": "boolean",
+                "description": "The master node indicator of the oag_node"
+            },
+            "number_of_cpus": {
+                "type": "long",
+                "description": "The number of oag_cpus"
+            }
+        }
+    },
+    "lifecycleConfiguration": {
+        "purgeTtlInMinutes": 200,
+        "retentionTtlInMinutes": 116
+    },
+    "metricTypes": [
+        "oktadev:oag_ha_validation",
+        "oktadev:oag_ha_last_sync"
+    ],
+    "associationTypes": {
+        "common:has": [            
+            "oktadev:oag_engine",
+            "oktadev:oag_disk",
+            "oktadev:oag_cpu",
+            "oktadev:oag_nic",
+            "oktadev:oag_memory"
+        ]
+    }
+}

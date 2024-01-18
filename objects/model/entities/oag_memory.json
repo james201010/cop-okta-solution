@@ -1,0 +1,40 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "entity",
+    "name": "oag_memory",
+    "displayName": "oag_memory",
+    "attributeDefinitions": {
+        "required": [
+            "host_name", "ip_address"
+        ],
+        "optimized": ["host_name", "ip_address"],
+        "attributes": {
+            "host_name": {
+                "type": "string",
+                "description": "The host name of the oag_memory"
+            },
+            "ip_address": {
+                "type": "string",
+                "description": "The ip address of the oag_memory"
+            }
+        }
+    },
+    "lifecycleConfiguration": {
+        "purgeTtlInMinutes": 200,
+        "retentionTtlInMinutes": 116
+    },
+    "metricTypes": [
+        "oktadev:oag_memory_total_bytes",
+        "oktadev:oag_memory_total_gb",
+        "oktadev:oag_memory_avail_bytes",
+        "oktadev:oag_memory_avail_gb",
+        "oktadev:oag_memory_free_bytes",
+        "oktadev:oag_memory_free_gb",
+        "oktadev:oag_memory_used_perc",
+        "oktadev:oag_memory_avail_perc",
+        "oktadev:oag_memory_free_perc"
+    ] 
+}

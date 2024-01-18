@@ -1,0 +1,15 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "metric",
+    "name": "oag_cpu_secs_nice",
+    "displayName": "oag_cpu_secs_nice",
+    "category": "current",
+    "contentType": "gauge",
+    "aggregationTemporality": "unspecified",
+    "isMonotonic": false,
+    "type": "double",
+    "unit": ""
+}

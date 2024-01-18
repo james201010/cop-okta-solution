@@ -1,0 +1,18 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "resourceMapping",
+    "name": "oktadev_oag_disk_entity_mapping",
+    "displayName": "Resource mapping configuration for the oktadev:oag_disk entity",
+    "entityType": "oktadev:oag_disk",
+    "scopeFilter": "containsAll(resourceAttributes, ['oktadev.oag_disk.host_name', 'oktadev.oag_disk.ip_address', 'oktadev.oag_disk.device_path', 'oktadev.oag_disk.file_sys_type', 'oktadev.oag_disk.mountpoint'])",
+    "attributeNameMappings": {
+        "device_path": "oktadev.oag_disk.device_path",
+        "file_sys_type": "oktadev.oag_disk.file_sys_type",
+        "host_name": "oktadev.oag_disk.host_name",
+        "ip_address": "oktadev.oag_disk.ip_address",
+        "mountpoint": "oktadev.oag_disk.mountpoint"
+    }
+}

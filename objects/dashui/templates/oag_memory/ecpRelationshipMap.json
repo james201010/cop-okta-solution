@@ -1,0 +1,53 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpRelationshipMap",
+    "target": "oktadev:oag_memory",
+    "view": "default",
+    "element": {
+        "instanceOf": "leftbar",
+        "elements": [
+            {
+                "key": "oag_cluster",
+                "path": "in.from(oktadev:oag_node).in.from(oktadev:oag_cluster)",
+                "entityAttribute": "cluster_name",
+                "iconName": "Location.Cluster"
+            },
+            {
+                "key": "oag_node",
+                "path": "in.from(oktadev:oag_node)",
+                "entityAttribute": "host_name",
+                "iconName": "Object.Node"
+            },
+            {
+                "key": "oag_engine",
+                "path": "in.from(oktadev:oag_node).out(common:has).to(oktadev:oag_engine)",
+                "entityAttribute": "host_name",
+                "iconName": "Object.WebServer"
+            },            
+            {
+                "key": "oag_memory",
+                "path": ".",
+                "entityAttribute": "host_name",
+                "iconName": "Action.Save"
+            },
+            {
+                "key": "oag_cpu",
+                "path": "in.from(oktadev:oag_node).out(common:has).to(oktadev:oag_cpu)",
+                "entityAttribute": "cpu_id",
+                "iconName": "Object.SessionFrame"
+            },
+            {
+                "key": "oag_disk",
+                "path": "in.from(oktadev:oag_node).out(common:has).to(oktadev:oag_disk)",
+                "entityAttribute": "device_path",
+                "iconName": "Object.FileServer"
+            },
+            {
+                "key": "oag_nic",
+                "path": "in.from(oktadev:oag_node).out(common:has).to(oktadev:oag_nic)",
+                "entityAttribute": "device_name",
+                "iconName": "Location.Apm"
+            }
+        ]
+    }
+}

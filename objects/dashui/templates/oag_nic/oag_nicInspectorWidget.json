@@ -1,0 +1,52 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_nicInspectorWidget",
+    "target": "oktadev:oag_nic",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": {
+            "instanceOf": {
+                "name": "inspectorWidget"
+            },
+            "elements": {
+                "instanceOf": {
+                    "name": "properties"
+                },
+                "elements": [
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "IP Address"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(ip_address)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Device Name"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(device_name)"
+                        }
+                    },
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Host Name"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(host_name)"
+                        }
+                    }
+                ]
+            },
+            "title": "Properties"
+        }
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_clusterDetailsList",
+    "target": "oktadev:oag_cluster",
+    "view": "default",
+    "element": {
+        "instanceOf": "html",
+        "elements": 
+        [
+
+            {
+                "instanceOf": "html",
+                "style": {
+                    "display": "flex",
+                    "margin-top": 10,
+                    "flexDirection": "column",
+                    "gap": 0
+                  },
+                "elements": [
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "style": {
+                                "height": 500,
+                                "margin-top": 10,
+                                "width": "100%"
+                            }
+                        },
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_clusterTopologyDetail"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Cluster Heartbeat"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_cluster_heartbeat"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_cluster_heartbeat",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": {
+                    "name": "logsWidget"
+                },
+                "source": "derived_metric"
+            }
+        ],
+        "style": {
+            "display": "flex",
+            "flexDirection": "column",
+            "gap": 12
+        }
+    }
+}

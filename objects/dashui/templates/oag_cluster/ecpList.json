@@ -1,0 +1,99 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpList",
+    "target": "oktadev:oag_cluster",
+    "view": "default",
+    "element": {
+        "instanceOf": "ocpList",
+        "elements": 
+        [
+            {
+                "instanceOf": "html",
+                "style": {
+                  "display": "flex",
+                  "margin-top": 10,
+                  "flexDirection": "column",
+                  "gap": 0
+                },
+                "elements": [
+                  {
+                    "instanceOf": "card",
+                    "props": {
+                      "style": {
+                        "height": 500,
+                        "margin-top": 10,
+                        "width": "100%"
+                      }
+                    },
+                    "elements": [
+                      {
+                        "instanceOf": "oktadev:oag_clusterTopologyDetail"
+                      }
+                    ]
+                  },
+                  {
+                      "instanceOf": "card",
+                      "props": {
+                        "title": "Cluster Nodes​",
+                        "style": {
+                          "height": 300,
+                          "margin-top": 10,
+                          "width": "100%"
+                        }
+                      },
+                      "elements": [
+                        {
+                          "instanceOf": "oktadev:oag_nodeSummaryGridTable"
+                        }
+                      ]
+                  },
+                  {
+                    "instanceOf": "card",
+                    "props": {
+                      "title": "Node Validation​",
+                      "style": {                
+                        "margin-top": 10,
+                        "width": "100%"
+                      }
+                    },
+                    "elements": [
+                      {
+                        "instanceOf": "oktadev:oag_nodeValidationChart"
+                      }
+                    ]
+                  },
+                  {
+                    "instanceOf": "card",
+                    "props": {
+                      "title": "Node Last Sync​",
+                      "style": {                
+                        "margin-top": 10,
+                        "width": "100%"
+                      }
+                    },
+                    "elements": [
+                      {
+                        "instanceOf": "oktadev:oag_nodeLastSyncChart"
+                      }
+                    ]
+                  },
+                  {
+                    "instanceOf": "card",
+                    "props": {
+                        "title": "Default Cluster List",
+                        "style": {
+                            "height": "175px",
+                            "width": "100%"
+                        }
+                    },
+                    "elements": [
+                        {
+                            "instanceOf": "oktadev:oag_clusterGridTable"
+                        }
+                    ]
+                  }
+                ]
+              }
+        ]
+    }
+}

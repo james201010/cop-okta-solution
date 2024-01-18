@@ -1,0 +1,38 @@
+[
+    {
+        "namespace": {
+            "name": "oktadev",
+            "version": 1
+        },
+        "kind": "associationDerivation",
+        "name": "okatdev_oag_cluster_to_oag_node_association",
+        "displayName": "Derived Relationship between oag_node and oag_cluster",
+        "associationType": "common:has",
+        "fromType": "oktadev:oag_cluster",
+        "toType": "oktadev:oag_node",        
+        "scopeFilter": "true",
+        "mappings": {
+            "attributes": {
+                "cluster_name": "this.attributes.'cluster_name'.value"                
+            }
+        }
+    },    
+    {
+        "namespace": {
+            "name": "oktadev",
+            "version": 1
+        },
+        "kind": "associationDerivation",
+        "name": "okatdev_oag_node_to_oag_cluster_association",
+        "displayName": "Derived Relationship between oag_cluster and oag_node",
+        "associationType": "common:has",
+        "fromType": "oktadev:oag_node",
+        "toType": "oktadev:oag_cluster",        
+        "scopeFilter": "true",
+        "mappings": {
+            "attributes": {
+                "cluster_name": "this.attributes.'cluster_name'.value"                
+            }
+        }
+    }
+]

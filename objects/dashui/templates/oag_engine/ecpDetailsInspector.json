@@ -1,0 +1,19 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpDetailsInspector",
+    "target": "oktadev:oag_engine",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": [
+            {
+                "instanceOf": {
+                    "name": "alerting"
+                }
+            },
+            {
+                "instanceOf": "oktadev:oag_engineInspectorWidget"
+            }
+        ]
+    }
+}

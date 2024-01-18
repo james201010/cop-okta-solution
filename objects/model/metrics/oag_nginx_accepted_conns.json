@@ -1,0 +1,15 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "metric",
+    "name": "oag_nginx_accepted_conns",
+    "displayName": "oag_nginx_accepted_conns",
+    "category": "current",
+    "contentType": "gauge",
+    "aggregationTemporality": "unspecified",
+    "isMonotonic": false,
+    "type": "long",
+    "unit": ""
+}

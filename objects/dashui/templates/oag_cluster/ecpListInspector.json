@@ -1,0 +1,33 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpListInspector",
+    "target": "oktadev:oag_cluster",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": [
+            {
+                "instanceOf": "focusedEntities",
+                "element": {
+                    "instanceOf": {
+                        "name": "nameWidget"
+                    },
+                    "path": [
+                        "attributes(cluster_name)",
+                        "id"
+                    ]
+                },
+                "mode": "SINGLE"
+            },
+            {
+                "instanceOf": "focusedEntities",
+                "element": {
+                    "instanceOf": {
+                        "name": "oktadev:oag_clusterInspectorWidget"
+                    }
+                },
+                "mode": "SINGLE"
+            }
+        ]
+    }
+}

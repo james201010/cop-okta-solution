@@ -1,0 +1,32 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_clusterInspectorWidget",
+    "target": "oktadev:oag_cluster",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": {
+            "instanceOf": {
+                "name": "inspectorWidget"
+            },
+            "elements": {
+                "instanceOf": {
+                    "name": "properties"
+                },
+                "elements": [
+                    {
+                        "label": {
+                            "instanceOf": "text",
+                            "content": "Cluster Name"
+                        },
+                        "value": {
+                            "instanceOf": "string",
+                            "path": "attributes(cluster_name)"
+                        }
+                    }
+                ]
+            },
+            "title": "Properties"
+        }
+    }
+}

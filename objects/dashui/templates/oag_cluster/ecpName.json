@@ -1,0 +1,13 @@
+{
+    "kind": "template",
+    "name": "dashui:name",
+    "target": "oktadev:oag_cluster",
+    "view": "default",
+    "element": {
+        "instanceOf": "string",
+        "path": [
+            "attributes(cluster_name)",
+            "id"
+        ]
+    }
+}

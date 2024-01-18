@@ -1,0 +1,76 @@
+{
+    "manifestVersion": "1.0.0",
+    "name": "oktadev",
+    "solutionVersion": "0.0.78",
+    "dependencies": [
+        "fmm",
+        "dashui"
+    ],
+    "description": "description of your solution",
+    "contact": "the email for this solution's point of contact",
+    "homepage": "the url for this solution's homepage",
+    "gitRepoUrl": "the url for the git repo holding your solution",
+    "readme": "the url for this solution's readme file",
+    "objects": [
+        {
+            "type": "fmm:namespace",
+            "objectsDir": "objects/model/namespaces"
+        },
+        {
+            "type": "fmm:entity",
+            "objectsDir": "objects/model/entities"
+        },
+        {
+            "type": "fmm:resourceMapping",
+            "objectsDir": "objects/model/resource-mappings"
+        },
+        {
+            "type": "fmm:metric",
+            "objectsDir": "objects/model/metrics"
+        },
+        {
+            "type": "fmm:associationDerivation",
+            "objectsDir": "objects/model/association-derivations"
+        },
+        {
+            "type": "fmm:entityPriority",
+            "objectsDir": "objects/model/entity-priorities"
+        },
+        {
+            "type": "dashui:entityPresentation",
+            "objectsDir": "objects/dashui/entityPresentations"
+        },
+        {
+            "type": "dashui:templatePropsExtension",
+            "objectsDir": "objects/dashui/templatePropsExtensions"
+        },
+        {
+            "type": "dashui:template",
+            "objectsDir": "objects/dashui/templates/oag_cluster"
+        },
+        {
+            "type": "dashui:template",
+            "objectsDir": "objects/dashui/templates/oag_cpu"
+        },
+        {
+            "type": "dashui:template",
+            "objectsDir": "objects/dashui/templates/oag_disk"
+        },
+        {
+            "type": "dashui:template",
+            "objectsDir": "objects/dashui/templates/oag_engine"
+        },
+        {
+            "type": "dashui:template",
+            "objectsDir": "objects/dashui/templates/oag_memory"
+        },
+        {
+            "type": "dashui:template",
+            "objectsDir": "objects/dashui/templates/oag_nic"
+        },
+        {
+            "type": "dashui:template",
+            "objectsDir": "objects/dashui/templates/oag_node"
+        }
+    ]
+}

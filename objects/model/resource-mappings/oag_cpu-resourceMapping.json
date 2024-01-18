@@ -1,0 +1,16 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "resourceMapping",
+    "name": "oktadev_oag_cpu_entity_mapping",
+    "displayName": "Resource mapping configuration for the oktadev:oag_cpu entity",
+    "entityType": "oktadev:oag_cpu",
+    "scopeFilter": "containsAll(resourceAttributes, ['oktadev.oag_cpu.host_name', 'oktadev.oag_cpu.ip_address', 'oktadev.oag_cpu.cpu_id'])",
+    "attributeNameMappings": {
+        "cpu_id": "oktadev.oag_cpu.cpu_id",
+        "host_name": "oktadev.oag_cpu.host_name",
+        "ip_address": "oktadev.oag_cpu.ip_address"
+    }
+}

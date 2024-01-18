@@ -1,0 +1,365 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_diskDetailsList",
+    "target": "oktadev:oag_disk",
+    "view": "default",
+    "element": {
+        "instanceOf": "html",
+        "elements": [
+            {
+                "instanceOf": "card",
+                "props": {
+                    "style": {
+                        "display": "flex",
+                        "margin-top": "3px",
+                        "flexDirection": "row",
+                        "margin-bottom": "5px"
+                    }
+                  },
+                "elements": [
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "title": "Filesystem Used Percentage",
+                            "style": {
+                               "width": "33%",
+                               "margin-left": "5px",
+                               "margin-right": "5px"
+                            }                           
+                        },                
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_diskUsedArcGaugeTemplate"
+        
+                            }             
+                        ]     
+                    },
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "title": "Filesystem Available Percentage",
+                            "style": {
+                               "width": "33%",
+                               "margin-left": "5px",
+                               "margin-right": "5px"
+                            }                           
+                        },                
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_diskAvailableArcGaugeTemplate"
+        
+                            }             
+                        ]     
+                    },
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "title": "Filesystem Free Percentage",
+                            "style": {
+                               "width": "33%",
+                               "margin-left": "5px",
+                               "margin-right": "5px"
+                            }                           
+                        },                
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_diskFreeArcGaugeTemplate"
+        
+                            }             
+                        ]     
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Size (Bytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_size_bytes"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_size_bytes",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Size (Gigabytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_size_gb"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_size_gb",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Available (Bytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_avail_bytes"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_avail_bytes",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Available (Gigabytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_avail_gb"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_avail_gb",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Free (Bytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_free_bytes"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_free_bytes",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Free (Gigabytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_free_gb"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_free_gb",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Used Percentage"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_used_perc"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_used_perc",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Available Percentage"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_avail_perc"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_avail_perc",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Filesystem Free Percentage"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_filesystem_free_perc"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_filesystem_free_perc",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": {
+                    "name": "logsWidget"
+                },
+                "source": "derived_metric"
+            }
+        ],
+        "style": {
+            "display": "flex",
+            "flexDirection": "column",
+            "gap": 12
+        }
+    }
+}

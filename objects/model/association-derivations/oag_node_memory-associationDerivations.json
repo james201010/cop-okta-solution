@@ -1,0 +1,40 @@
+[
+    {
+        "namespace": {
+            "name": "oktadev",
+            "version": 1
+        },
+        "kind": "associationDerivation",
+        "name": "okatdev_oag_memory_to_oag_node_association",
+        "displayName": "Derived Relationship between oag_node and oag_memory",
+        "associationType": "common:has",
+        "fromType": "oktadev:oag_memory",
+        "toType": "oktadev:oag_node",        
+        "scopeFilter": "true",
+        "mappings": {
+            "attributes": {
+                "host_name": "this.attributes.'host_name'.value",
+                "ip_address": "this.attributes.'ip_address'.value"                
+            }
+        }
+    },    
+    {
+        "namespace": {
+            "name": "oktadev",
+            "version": 1
+        },
+        "kind": "associationDerivation",
+        "name": "okatdev_oag_node_to_oag_memory_association",
+        "displayName": "Derived Relationship between oag_memory and oag_node",
+        "associationType": "common:has",
+        "fromType": "oktadev:oag_node",
+        "toType": "oktadev:oag_memory",        
+        "scopeFilter": "true",
+        "mappings": {
+            "attributes": {
+                "host_name": "this.attributes.'host_name'.value",
+                "ip_address": "this.attributes.'ip_address'.value"                
+            }
+        }
+    }
+]

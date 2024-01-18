@@ -1,0 +1,52 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "entity",
+    "name": "oag_disk",
+    "displayName": "oag_disk",
+    "attributeDefinitions": {
+        "required": [
+            "host_name", "ip_address", "device_path", "file_sys_type", "mountpoint"
+        ],
+        "optimized": ["host_name", "ip_address", "device_path", "file_sys_type", "mountpoint"],
+        "attributes": {
+            "host_name": {
+                "type": "string",
+                "description": "The host name of the oag_disk"
+            },
+            "ip_address": {
+                "type": "string",
+                "description": "The ip address of the oag_disk"
+            },
+            "device_path": {
+                "type": "string",
+                "description": "The device path of the oag_disk"
+            },
+            "file_sys_type": {
+                "type": "string",
+                "description": "The file system type of the oag_disk"
+            },
+            "mountpoint": {
+                "type": "string",
+                "description": "The mountpoint of the oag_disk"
+            }
+        }
+    },
+    "lifecycleConfiguration": {
+        "purgeTtlInMinutes": 200,
+        "retentionTtlInMinutes": 116
+    },
+    "metricTypes": [
+        "oktadev:oag_filesystem_size_bytes",
+        "oktadev:oag_filesystem_size_gb",
+        "oktadev:oag_filesystem_avail_bytes",
+        "oktadev:oag_filesystem_avail_gb",
+        "oktadev:oag_filesystem_free_bytes",
+        "oktadev:oag_filesystem_free_gb",
+        "oktadev:oag_filesystem_used_perc",
+        "oktadev:oag_filesystem_avail_perc",
+        "oktadev:oag_filesystem_free_perc"
+    ] 
+}

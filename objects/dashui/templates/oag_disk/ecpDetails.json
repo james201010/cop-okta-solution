@@ -1,0 +1,15 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpDetails",
+    "target": "oktadev:oag_disk",
+    "view": "default",
+    "element": {
+        "instanceOf": "ocpSingle",
+        "elements": [
+            {
+                "instanceOf": "oktadev:oag_diskDetailsList"
+            }
+        ],
+        "nameAttribute": "host_name"
+    }
+}

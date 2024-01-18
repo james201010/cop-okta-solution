@@ -1,0 +1,15 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "resourceMapping",
+    "name": "oktadev_oag_engine_entity_mapping",
+    "displayName": "Resource mapping configuration for the oktadev:oag_engine entity",
+    "entityType": "oktadev:oag_engine",
+    "scopeFilter": "containsAll(resourceAttributes, ['oktadev.oag_engine.host_name', 'oktadev.oag_engine.ip_address'])",
+    "attributeNameMappings": {
+        "host_name": "oktadev.oag_engine.host_name",
+        "ip_address": "oktadev.oag_engine.ip_address"
+    }
+}

@@ -1,0 +1,139 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_diskGridTable",
+    "target": "oktadev:oag_disk",
+    "view": "default",
+    "element": {
+        "instanceOf": "grid",
+        "rowSets": {
+            "default": {
+                "keyPath": "id"
+            }
+        },
+        "mode": "client",
+        "columns": [
+            {
+                "label": "Health",
+                "flex": 0,
+                "width": 80,
+                "cell": {
+                    "default": {
+                        "instanceOf": {
+                            "name": "health"
+                        }
+                    }
+                }
+            },
+            {
+                "label": "Host Name",
+                "flex": 0,
+                "width": 425,
+                "sortable": true,
+                "sort": "desc",
+                "cell": {
+                    "default": {
+                        "instanceOf": "tooltip",
+                        "truncate": true,
+                        "trigger": {
+                            "instanceOf": "clickable",
+                            "onClick": {
+                                "type": "navigate.entity.detail",
+                                "paths": [
+                                    "id"
+                                ],
+                                "expression": "$ ~> |$|{\"id\": $data[0]}|"
+                            },
+                            "trigger": {
+                                "instanceOf": "string",
+                                "path": [
+                                    "attributes(host_name)",
+                                    "id"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "label": "IP Address",
+                "flex": 0,
+                "width": 150,
+                "sortable": true,
+                "cell": {
+                    "default": {
+                        "instanceOf": "tooltip",
+                        "truncate": true,
+                        "trigger": {
+                            "instanceOf": "string",
+                            "path": [
+                                "attributes(ip_address)"
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "label": "Device Path",
+                "flex": 0,
+                "width": 150,
+                "sortable": true,
+                "cell": {
+                    "default": {
+                        "instanceOf": "tooltip",
+                        "truncate": true,
+                        "trigger": {
+                            "instanceOf": "string",
+                            "path": [
+                                "attributes(device_path)"
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "label": "File System Type",
+                "flex": 0,
+                "width": 150,
+                "sortable": true,
+                "cell": {
+                    "default": {
+                        "instanceOf": "tooltip",
+                        "truncate": true,
+                        "trigger": {
+                            "instanceOf": "string",
+                            "path": [
+                                "attributes(file_sys_type)"
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "label": "Mountpoint",
+                "flex": 0,
+                "width": 150,
+                "sortable": true,
+                "cell": {
+                    "default": {
+                        "instanceOf": "tooltip",
+                        "truncate": true,
+                        "trigger": {
+                            "instanceOf": "string",
+                            "path": [
+                                "attributes(mountpoint)"
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "onRowSingleClick": {
+            "type": "common.focusEntity",
+            "expression": "{ \"id\": $params.key }"
+        },
+        "onRowDoubleClick": {
+            "type": "navigate.entity.detail",
+            "expression": "{ \"id\": $params.key }"
+        }
+    }
+}

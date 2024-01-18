@@ -1,0 +1,16 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "resourceMapping",
+    "name": "oktadev_oag_nic_entity_mapping",
+    "displayName": "Resource mapping configuration for the oktadev:oag_nic entity",
+    "entityType": "oktadev:oag_nic",
+    "scopeFilter": "containsAll(resourceAttributes, ['oktadev.oag_nic.host_name', 'oktadev.oag_nic.ip_address', 'oktadev.oag_nic.device_name'])",
+    "attributeNameMappings": {
+        "device_name": "oktadev.oag_nic.device_name",
+        "host_name": "oktadev.oag_nic.host_name",
+        "ip_address": "oktadev.oag_nic.ip_address"
+    }
+}

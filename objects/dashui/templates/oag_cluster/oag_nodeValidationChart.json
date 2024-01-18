@@ -1,0 +1,32 @@
+[
+    {
+        "kind": "template",
+        "name": "oktadev:oag_nodeValidationChart",
+        "view": "default",
+        "target": "*",
+        "props": {
+            "source": "oktadev"
+        },
+        "element": {
+            "instanceOf" : "relatedSet",
+            "path" : "out(common:has).to(oktadev:oag_node)",
+            "element": {
+                "instanceOf": "cartesian",
+                "props": {
+                    "legend": true
+                },
+                "children": [
+                    {
+                        "type": "LINE",
+                        "namePath": "attributes(host_name)",
+                        "metric": {
+                            "name": "oktadev:oag_ha_validation",
+                            "source": "oktadev",
+                            "value": "value"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+]

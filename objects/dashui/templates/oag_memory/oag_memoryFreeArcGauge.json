@@ -1,0 +1,82 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_memoryFreeArcGauge",
+    "target": "*",
+    "props": {
+      "maxValue":  100,
+      "minValue": 0,
+      "size": 200,
+      "valueFontSize": 36,
+      "thickness": 12,
+      "valueQuery": "FROM entities(oktadev:oag_memory) FETCH count",
+      "valueAlias": "count",
+      "hideRange": false,
+      "format": "#"
+    },
+    "preprocess": "$ ~> | $.'@sources' | {'default': [{'type': 'uqe', 'query': $props.valueQuery, 'useTimeRange': true},{'type': 'expr', 'expr': 'rows[0].' & $props.valueAlias}]} |\n  ~> | children[0].'@data' | $merge($each($props, function($v, $k) {({$k: {'type': 'value', 'value': $v}})})) |\n  ~> | style | {'width': $props.size} |\n  ~> | children[0] | {'width': $props.size, 'position': 'relative', 'height': $props.size} |\n  ~> | children[1].style | {'height': $props.size, 'width': $props.size, 'fontSize': $props.valueFontSize} |\n  ~> | children[1] | {'$children': '$data.value[0] = null ? \"- / -\" :  $formatNumber($data.value[0],\"' & $props.format & '\")'} |\n  ~> | children[2].style | {'margin-top': $min([0, -($props.size - 40) / 8]) }  |\n  ~> | children[2].children[0] | {'children': $props.hideRange ? '' : $props.minValue} |\n  ~> | children[2].children[2] | {'children': $props.hideRange ? '' : $props.maxValue} |\n  ~> | children[2].children[1] | {'children': $props.unit} |",
+    "element": {
+      "@type": "html.div",
+      "style": {
+        "width": 200,
+        "position": "relative"
+      },
+      "@sources": {
+        "default": [{
+          "type": "uqe",
+          "useTimeRange": true
+        },
+          {"type": "expr", "expr": "rows[0].count"}
+        ]
+      },
+      "children": [
+        {
+          "@type": "svg",
+          "@data": {
+            "value": {
+              "from": "default"
+            }
+          },
+          "$children": "($value:= $data.value[0] = null ? 0 : $data.value[0]; $pi := 3.1415926535897932384626; $product := function($a, $b) { $a * $b }; $factorial := function($n) { $n = 0 ? 1 : $reduce([1..$n], $product) }; $sin := function($x){ /* define sine in terms of cosine */   $cos($x - $pi/2) }; $cos := function($x){ $x > $pi ? $cos($x - 2 * $pi) : $x < -$pi ? $cos($x + 2 * $pi) : $sum([0..12].($power(-1, $) * $power($x, 2*$) / $factorial(2*$))) }; $p2c:=function($cx, $cy, $phi, $r){ $string($cx + $r * $cos($phi / 180 * $pi)) & ' ' &  $string($cy + $r * $sin($phi / 180 * $pi)) }; $c:=$data.size[0] / 2; $r:=$c - 1.5 * $data.thickness[0]; $str := function($arr) {$arr.$string($) ~> $join(' ')}; $arc := function($phi, $dphi) {    'M' & $p2c($c, $c, $phi, $r)     & 'A' & $str([$r, $r, 0, $dphi > 180 ? 1 : 0, 1, $p2c($c, $c, $phi + $dphi, $r)], ' ') };$colorIndex := $max([$reduce($data.colorThresholds, function($lastIndex, $t, $index){($value < $t and $lastIndex > $index) ? $index : $lastIndex}, $count($data.colorThresholds)) - 1, 0]); $solidPhi := 300 * $max([0, $min([($value - $data.minValue[0]) / ($data.maxValue[0] - $data.minValue[0]), 1])]); {'@type': 'svg', 'width': $data.size[0], 'height': $data.size[0], 'children': [{'phi':300, 'op': 0.25}, {'phi':$solidPhi, 'op': 0.9}].{     '@type': 'svg.path',     'd': $arc(120, $.phi),     'stroke': $data.color[$colorIndex],     'stroke-width': $data.thickness[0],     'fill': 'none',     'stroke-opacity': $.op,     'stroke-linecap': 'round' }})"
+  
+        },
+        {
+          "@type": "html.div",
+          "@data": {
+            "value": {
+              "from":  "default"
+            }
+          },
+          "$children": "$data.value[0] = null ? 'NULL' :  $formatNumber($data.value[0],'#')",
+          "style": {
+            "top": 0,
+            "left": 0,
+            "height": 200,
+            "font-size": 24,
+            "position": "absolute",
+            "display": "flex",
+            "align-items": "center",
+            "justify-content": "center"
+          }
+        },
+        {
+          "@type": "html.div",
+          "style": {"display":  "flex", "justify-content": "space-between", "padding-left":  12, "padding-right":  12},
+          "children": [
+          {
+            "@type":  "html.div",
+            "children": "min"
+          },
+            {
+              "@type": "html.div",
+              "children": ""
+            },
+            {
+              "@type":  "html.div",
+              "children": "max"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

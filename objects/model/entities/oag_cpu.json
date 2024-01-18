@@ -1,0 +1,47 @@
+{
+    "namespace": {
+        "name": "oktadev",
+        "version": 1
+    },
+    "kind": "entity",
+    "name": "oag_cpu",
+    "displayName": "oag_cpu",
+    "attributeDefinitions": {
+        "required": [
+            "host_name", "ip_address", "cpu_id"
+        ],
+        "optimized": ["host_name", "ip_address", "cpu_id"],
+        "attributes": {
+            "host_name": {
+                "type": "string",
+                "description": "The host name of the oag_cpu"
+            },
+            "ip_address": {
+                "type": "string",
+                "description": "The ip address of the oag_cpu"
+            },
+            "cpu_id": {
+                "type": "string",
+                "description": "The cpu identifier of the oag_cpu"
+            }
+        }
+    },
+    "lifecycleConfiguration": {
+        "purgeTtlInMinutes": 200,
+        "retentionTtlInMinutes": 116
+    },
+    "metricTypes": [
+        "oktadev:oag_cpu_secs_idle",
+        "oktadev:oag_cpu_secs_iowait",
+        "oktadev:oag_cpu_secs_irq",
+        "oktadev:oag_cpu_secs_nice",
+        "oktadev:oag_cpu_secs_softirq",
+        "oktadev:oag_cpu_secs_steal",
+        "oktadev:oag_cpu_secs_system",
+        "oktadev:oag_cpu_secs_user",
+        "oktadev:oag_cpu_perc_used",
+        "oktadev:oag_cpu_load_1_min_avg",
+        "oktadev:oag_cpu_load_5_min_avg",
+        "oktadev:oag_cpu_load_15_min_avg"
+    ] 
+}

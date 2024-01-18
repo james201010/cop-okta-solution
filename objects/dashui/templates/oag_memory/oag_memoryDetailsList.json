@@ -1,0 +1,272 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_memoryDetailsList",
+    "target": "oktadev:oag_memory",
+    "view": "default",
+    "element": {
+        "instanceOf": "html",
+        "elements": [
+            {
+                "instanceOf": "card",
+                "props": {
+                    "style": {
+                        "display": "flex",
+                        "margin-top": "3px",
+                        "flexDirection": "row",
+                        "margin-bottom": "5px"
+                    }
+                  },
+                "elements": [
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "title": "Memory Used Percentage",
+                            "style": {
+                               "width": "33%",
+                               "margin-left": "5px",
+                               "margin-right": "5px"
+                            }                           
+                        },                
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_memoryUsedArcGaugeTemplate"
+        
+                            }             
+                        ]     
+                    },
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "title": "Memory Available Percentage",
+                            "style": {
+                               "width": "33%",
+                               "margin-left": "5px",
+                               "margin-right": "5px"
+                            }                           
+                        },                
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_memoryAvailableArcGaugeTemplate"
+        
+                            }             
+                        ]     
+                    },
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "title": "Memory Free Percentage",
+                            "style": {
+                               "width": "33%",
+                               "margin-left": "5px",
+                               "margin-right": "5px"
+                            }                           
+                        },                
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_memoryFreeArcGaugeTemplate"
+        
+                            }             
+                        ]     
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Total Bytes"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_memory_total_bytes"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_memory_total_bytes",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Total Gigabytes"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_memory_total_gb"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_memory_total_gb",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Available Memory (Bytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_memory_avail_bytes"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_memory_avail_bytes",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Memory Available (Gigabytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_memory_avail_gb"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_memory_avail_gb",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Memory Free (Bytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_memory_free_bytes"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_memory_free_bytes",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": "card",
+                "props": {
+                    "title": "Memory Free (Gigabytes)"
+                },
+                "elements": [
+                    {
+                        "instanceOf": "cartesian",
+                        "props": {
+                            "style": {
+                                "height": 250
+                            }
+                        },
+                        "children": [
+                            {
+                                "props": {
+                                    "name": "oktadev:oag_memory_free_gb"
+                                },
+                                "metric": {
+                                    "name": "oktadev:oag_memory_free_gb",
+                                    "source": "oktadev",
+                                    "y": {
+                                        "type": "value"
+                                    }
+                                },
+                                "type": "LINE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "instanceOf": {
+                    "name": "logsWidget"
+                },
+                "source": "derived_metric"
+            }
+        ],
+        "style": {
+            "display": "flex",
+            "flexDirection": "column",
+            "gap": 12
+        }
+    }
+}
