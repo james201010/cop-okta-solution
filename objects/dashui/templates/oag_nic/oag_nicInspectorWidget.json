@@ -5,48 +5,167 @@
     "view": "default",
     "element": {
         "instanceOf": "elements",
-        "elements": {
-            "instanceOf": {
-                "name": "inspectorWidget"
-            },
-            "elements": {
+        "elements": [
+            {
+                "title": "Properties",
                 "instanceOf": {
-                    "name": "properties"
+                    "name": "inspectorWidget"
                 },
+                "elements": {
+                    "instanceOf": {
+                        "name": "properties"
+                    },
+                    "elements": [
+                        {
+                            "label": {
+                                "instanceOf": "text",
+                                "content": "IP Address"
+                            },
+                            "value": {
+                                "instanceOf": "string",
+                                "path": "attributes(ip_address)"
+                            }
+                        },
+                        {
+                            "label": {
+                                "instanceOf": "text",
+                                "content": "Device Name"
+                            },
+                            "value": {
+                                "instanceOf": "string",
+                                "path": "attributes(device_name)"
+                            }
+                        },
+                        {
+                            "label": {
+                                "instanceOf": "text",
+                                "content": "Host Name"
+                            },
+                            "value": {
+                                "instanceOf": "string",
+                                "path": "attributes(host_name)"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                },
+                "title": "Key Indicators",
                 "elements": [
                     {
-                        "label": {
-                            "instanceOf": "text",
-                            "content": "IP Address"
+                        "instanceOf": {
+                            "name": "oktadev:sparkgraph"
                         },
-                        "value": {
-                            "instanceOf": "string",
-                            "path": "attributes(ip_address)"
+                        "headline": "Network Receive Drop",
+                        "additionalInformation": {
+                            "path": "metrics(oktadev:oag_network_receive_drop, oktadev).value",
+                            "branches": [
+                                {
+                                    "value": null,
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    }
+                                }
+                            ],
+                            "defaultElements": {
+                                "instanceOf": "elements",
+                                "elements": [
+                                    {
+                                        "instanceOf": "number",
+                                        "emptyContent": "0",
+                                        "path": "metrics(oktadev:oag_network_receive_drop, oktadev).value"
+                                    }
+                                ]
+                            }
+                        },
+                        "graph": {
+                            "path": "oktadev:oag_network_receive_drop",
+                            "source": "oktadev"
                         }
                     },
                     {
-                        "label": {
-                            "instanceOf": "text",
-                            "content": "Device Name"
+                        "instanceOf": "html",
+                        "style": {
+                          "margin-bottom": "25px",
+                          "border-bottom": "1px solid",
+                          "padding-bottom": "10px"
+                        }
+                    }, 
+                    {
+                        "instanceOf": {
+                            "name": "oktadev:sparkgraph"
                         },
-                        "value": {
-                            "instanceOf": "string",
-                            "path": "attributes(device_name)"
+                        "headline": "Network Receive Errors",
+                        "additionalInformation": {
+                            "path": "metrics(oktadev:oag_network_receive_errs, oktadev).value",
+                            "branches": [
+                                {
+                                    "value": null,
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    }
+                                }
+                            ],
+                            "defaultElements": {
+                                "instanceOf": "elements",
+                                "elements": [
+                                    {
+                                        "instanceOf": "number",
+                                        "emptyContent": "0",
+                                        "path": "metrics(oktadev:oag_network_receive_errs, oktadev).value"
+                                    }
+                                ]
+                            }
+                        },
+                        "graph": {
+                            "path": "oktadev:oag_network_receive_errs",
+                            "source": "oktadev"
                         }
                     },
                     {
-                        "label": {
-                            "instanceOf": "text",
-                            "content": "Host Name"
+                        "instanceOf": "html",
+                        "style": {
+                          "margin-bottom": "25px",
+                          "border-bottom": "1px solid",
+                          "padding-bottom": "10px"
+                        }
+                    }, 
+                    {
+                        "instanceOf": {
+                            "name": "oktadev:sparkgraph"
                         },
-                        "value": {
-                            "instanceOf": "string",
-                            "path": "attributes(host_name)"
+                        "headline": "Network Receive (Bytes)",
+                        "additionalInformation": {
+                            "path": "metrics(oktadev:oag_network_receive_bytes, oktadev).value",
+                            "branches": [
+                                {
+                                    "value": null,
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    }
+                                }
+                            ],
+                            "defaultElements": {
+                                "instanceOf": "elements",
+                                "elements": [
+                                    {
+                                        "instanceOf": "number",
+                                        "emptyContent": "0",
+                                        "path": "metrics(oktadev:oag_network_receive_bytes, oktadev).value"
+                                    }
+                                ]
+                            }
+                        },
+                        "graph": {
+                            "path": "oktadev:oag_network_receive_bytes",
+                            "source": "oktadev"
                         }
                     }
                 ]
-            },
-            "title": "Properties"
-        }
+            }
+        ]
     }
 }

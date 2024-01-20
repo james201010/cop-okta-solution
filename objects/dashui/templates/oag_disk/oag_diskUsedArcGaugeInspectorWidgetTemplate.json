@@ -1,0 +1,51 @@
+{
+  "kind": "template",
+  "name": "oktadev:oag_diskUsedArcGaugeInspectorWidgetTemplate",
+  "target": "*",
+  "props": {
+    "title": "Filesystem Used Percentage",
+    "maxValue": 100,
+    "minValue": 0,
+    "color": [
+      "green",
+      "#bebf02",
+      "red"
+    ],    
+    "colorThresholds": [90,76,0],   
+    "format": "#", 
+    "size": 160,
+    "headingStyle": {},
+    "valueFontSize": 30,
+    "thickness": 12,
+    "fetchValue": "metrics(oktadev:oag_filesystem_used_perc, oktadev).value"
+  },
+  "preprocess": "$ ~> | elements[0].elements[0].style | $props.headingStyle | ~> | elements[0].elements[0] | {'children': $props.title, 'style': $merge([$.style, {'width': $props.size}])} |\n  ~> | elements[0].elements[1] | $merge([\n     $sift($props, function($v, $k) {$k in ['minValue', 'maxValue', 'color', 'colorThresholds', 'size', 'valueFontSize', 'thickness', 'format', 'unit', 'hideRange']}),\n      {'valueQuery': 'FROM {{topology}} FETCH v:' & $props.fetchValue}])|",
+
+  "element": {
+    "instanceOf": "html",
+    "style": { 
+      "display": "flex", 
+      "flex-direction": "column",
+      "align-items": "center",
+      "justify-content": "center"
+     },
+    "elements": [
+      {
+        "instanceOf": "v1plus",
+        "preprocess": "$ ~> | $ | {'valueQuery': $replace(valueQuery, '{{topology}}', $props.topology)} |",
+        "elements": [
+          {
+            "@type": "html.div",
+            "style": { "text-align": "center", "font-size": 14, "width": 160 },
+            "children": ""
+          },
+          {
+            "@type": "oktadev:oag_diskUsedArcGaugeInspectorWidget",
+            "valueAlias": "v",
+            "valueQuery": "FROM {{topology}} FETCH count"
+          }
+        ]
+      }
+    ]
+  }
+}

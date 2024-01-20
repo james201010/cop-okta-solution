@@ -51,13 +51,45 @@
             }
         },
         {
+            "instanceOf": "html",
+            "style": {
+              "margin-bottom": "25px",
+              "border-bottom": "1px solid",
+              "padding-bottom": "10px"
+            }
+        },
+        {
             "instanceOf": "oktadev:oag_memoryUsedArcGaugeInspectorWidgetTemplate"
+        },
+        {
+            "instanceOf": "html",
+            "style": {
+              "margin-bottom": "25px",
+              "border-bottom": "1px solid",
+              "padding-bottom": "10px"
+            }
         },
         {
             "instanceOf": "oktadev:oag_memoryAvailableArcGaugeInspectorWidgetTemplate"
         },
         {
+            "instanceOf": "html",
+            "style": {
+              "margin-bottom": "25px",
+              "border-bottom": "1px solid",
+              "padding-bottom": "10px"
+            }
+        },
+        {
             "instanceOf": "oktadev:oag_memoryFreeArcGaugeInspectorWidgetTemplate"
+        },
+        {
+            "instanceOf": "html",
+            "style": {
+              "margin-bottom": "25px",
+              "border-bottom": "1px solid",
+              "padding-bottom": "10px"
+            }
         }
         ]
     }

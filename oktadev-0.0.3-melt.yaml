@@ -1,0 +1,349 @@
+melt:
+- typename: oktadev:oag_cpu
+  attributes:
+    oktadev.oag_cpu.cpu_id: "3"
+    oktadev.oag_cpu.host_name: "okta-oag-linux-int-workernode-1-new.dev.aws.glic.com"
+    oktadev.oag_cpu.ip_address: "10.212.8.239"
+    telemetry.sdk.name: "oktadev"
+  metrics:
+  - typename: oktadev:oag_cpu_secs_idle
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_secs_iowait
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_secs_irq
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_secs_nice
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_secs_softirq
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_secs_steal
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_secs_system
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_secs_user
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_perc_used
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "120.0"
+  - typename: oktadev:oag_cpu_load_1_min_avg
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "1.0"
+  - typename: oktadev:oag_cpu_load_5_min_avg
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "5.0"
+  - typename: oktadev:oag_cpu_load_15_min_avg
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "15.0"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_cpu
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_cpu
+    severity: INFO
+    attributes:
+      level: info
+  relationships: []
+  spans: []
+- typename: oktadev:oag_disk
+  attributes:
+    oktadev.oag_disk.device_path: "/dev/mapper/ol_oag-root"
+    oktadev.oag_disk.file_sys_type: "xfs"
+    oktadev.oag_disk.host_name: "okta-oag-linux-int-workernode-1-new.dev.aws.glic.com"
+    oktadev.oag_disk.ip_address: "10.212.8.239"
+    oktadev.oag_disk.mountpoint: "/boot"
+    telemetry.sdk.name: "oktadev"
+  metrics:
+  - typename: oktadev:oag_filesystem_size_bytes
+    contenttype: gauge
+    unit: "{bytes}"
+    type: double
+    min: "0.0"
+    max: "4200.0"
+  - typename: oktadev:oag_filesystem_size_gb
+    contenttype: gauge
+    unit: "{gb}"
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_filesystem_avail_bytes
+    contenttype: gauge
+    unit: "{bytes}"
+    type: double
+    min: "0.0"
+    max: "4200.0"
+  - typename: oktadev:oag_filesystem_avail_gb
+    contenttype: gauge
+    unit: "{gb}"
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_filesystem_free_bytes
+    contenttype: gauge
+    unit: "{bytes}"
+    type: double
+    min: "0.0"
+    max: "4200.0"
+  - typename: oktadev:oag_filesystem_free_gb
+    contenttype: gauge
+    unit: "{gb}"
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_filesystem_used_perc
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_filesystem_avail_perc
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_filesystem_free_perc
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "100.0"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_disk
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_disk
+    severity: INFO
+    attributes:
+      level: info
+  relationships: []
+  spans: []
+- typename: oktadev:oag_engine
+  attributes:
+    oktadev.oag_engine.host_name: "okta-oag-linux-int-workernode-1-new.dev.aws.glic.com"
+    oktadev.oag_engine.ip_address: "10.212.8.239"
+    telemetry.sdk.name: "oktadev"
+  metrics:
+  - typename: oktadev:oag_nginx_active_conns
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_nginx_handled_conns
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_nginx_total_requests
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_nginx_waiting_conns
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_nginx_accepted_conns
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_promhttp_metric_handler_requests_200
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_promhttp_metric_handler_requests_500
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_promhttp_metric_handler_requests_503
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_promhttp_metric_handler_errs_encode
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  - typename: oktadev:oag_promhttp_metric_handler_errs_gather
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "1000"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_engine
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_engine
+    severity: INFO
+    attributes:
+      level: info
+  relationships: []
+  spans: []
+- typename: oktadev:oag_memory
+  attributes:
+    oktadev.oag_memory.host_name: "okta-oag-linux-int-workernode-1-new.dev.aws.glic.com"
+    oktadev.oag_memory.ip_address: "10.212.8.239"
+    telemetry.sdk.name: "oktadev"
+  metrics:
+  - typename: oktadev:oag_memory_total_bytes
+    contenttype: gauge
+    unit: "{bytes}"
+    type: double
+    min: "0.0"
+    max: "4200.0"
+  - typename: oktadev:oag_memory_total_gb
+    contenttype: gauge
+    unit: "{gb}"
+    type: double
+    min: "0"
+    max: "100"
+  - typename: oktadev:oag_memory_avail_bytes
+    contenttype: gauge
+    unit: "{bytes}"
+    type: double
+    min: "0.0"
+    max: "4200"
+  - typename: oktadev:oag_memory_avail_gb
+    contenttype: gauge
+    unit: "{gb}"
+    type: double
+    min: "0"
+    max: "100"
+  - typename: oktadev:oag_memory_free_bytes
+    contenttype: gauge
+    unit: "{bytes}"
+    type: double
+    min: "0.0"
+    max: "4200.0"
+  - typename: oktadev:oag_memory_free_gb
+    contenttype: gauge
+    unit: "{gb}"
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_memory_used_perc
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_memory_avail_perc
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_memory_free_perc
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "100.0"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_memory
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_memory
+    severity: INFO
+    attributes:
+      level: info
+  relationships: []
+  spans: []
+- typename: oktadev:oag_nic
+  attributes:
+    oktadev.oag_nic.device_name: "eth2"
+    oktadev.oag_nic.host_name: "okta-oag-linux-int-workernode-1-new.dev.aws.glic.com"
+    oktadev.oag_nic.ip_address: "10.212.8.239"
+    telemetry.sdk.name: "oktadev"
+  metrics:
+  - typename: oktadev:oag_network_receive_drop
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_network_receive_errs
+    contenttype: gauge
+    unit: ""
+    type: double
+    min: "0.0"
+    max: "100.0"
+  - typename: oktadev:oag_network_receive_bytes
+    contenttype: gauge
+    unit: "{bytes}"
+    type: double    
+    min: "0.0"
+    max: "4200.0"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_nic
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_nic
+    severity: INFO
+    attributes:
+      level: info
+  relationships: []
+  spans: []

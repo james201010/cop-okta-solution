@@ -1,0 +1,267 @@
+melt:
+- typename: oktadev:oag_cluster
+  attributes:
+    oktadev.oag_cluster.cluster_name: "OKTA-DEV"
+    telemetry.sdk.name: "oktadev"
+    oktadev.type: "oag_cluster"
+  metrics: 
+  - typename: oktadev:oag_cluster_heartbeat
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "1"
+    max: "100"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_cluster
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_cluster
+    severity: INFO
+    attributes:
+      level: info
+  relationships: 
+    # - attributes:
+    #     oktadev.oag_node.host_name: "okta-oag-linux-admin-1-new.dev.aws.glic.com"
+    #     oktadev.oag_node.ip_address: "10.212.0.139"
+    #     oktadev.oag_node.cluster_name: "OKTA-DEV"
+    #     oktadev.type: "oag_node"
+  spans: []
+- typename: oktadev:oag_node
+  attributes:
+    oktadev.oag_node.cluster_name: "OKTA-DEV"
+    oktadev.oag_node.host_name: "okta-oag-linux-admin-1-new.dev.aws.glic.com"
+    oktadev.oag_node.http_scheme: "https"
+    oktadev.oag_node.ip_address: "10.212.0.139"
+    oktadev.oag_node.is_master_node: true
+    oktadev.oag_node.net_host_port: "447"
+    oktadev.oag_node.service_instance_id: "0"
+    oktadev.oag_node.service_name: "okta_test_node0"
+    telemetry.sdk.name: "oktadev"
+    oktadev.type: "oag_node"
+  metrics: 
+  - typename: oktadev:oag_ha_validation
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "1"
+    max: "10"
+  - typename: oktadev:oag_ha_last_sync
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "12"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_node
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_node
+    severity: INFO
+    attributes:
+      level: info
+  relationships:
+     - attributes:
+        # oktadev.oag_engine.host_name: "okta-oag-linux-admin-1-new.dev.aws.glic.com"
+        # oktadev.oag_engine.ip_address: "10.212.0.139"
+        # oktadev.type: "oag_engine"
+  spans: []
+- typename: oktadev:oag_cluster
+  attributes:
+    oktadev.oag_cluster.cluster_name: "OKTA-DEV"
+    telemetry.sdk.name: "oktadev"
+  metrics: 
+  - typename: oktadev:oag_cluster_heartbeat
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "1"
+    max: "100"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_cluster
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_cluster
+    severity: INFO
+    attributes:
+      level: info
+  relationships: 
+    - attributes:
+      oktadev.oag_engine.host_name: "okta-oag-linux-ext-workernode-1-new.dev.aws.glic.com"
+      oktadev.oag_engine.ip_address: "10.212.5.105"
+      oktadev.oag_node.cluster_name: "OKTA-DEV"
+      oktadev.type: "oag_node"
+  spans: []
+- typename: oktadev:oag_node
+  attributes:
+    oktadev.oag_node.cluster_name: "OKTA-DEV"
+    oktadev.oag_node.host_name: "okta-oag-linux-ext-workernode-1-new.dev.aws.glic.com"
+    oktadev.oag_node.http_scheme: "https"
+    oktadev.oag_node.ip_address: "10.212.5.105"
+    oktadev.oag_node.is_master_node: false
+    oktadev.oag_node.net_host_port: "447"
+    oktadev.oag_node.service_instance_id: "2"
+    oktadev.oag_node.service_name: "okta_test_node2"
+    telemetry.sdk.name: "oktadev"
+  metrics: 
+  - typename: oktadev:oag_ha_validation
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "1"
+    max: "10"
+  - typename: oktadev:oag_ha_last_sync
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "12"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_node
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_node
+    severity: INFO
+    attributes:
+      level: info
+  relationships: 
+    - attributes:
+        oktadev.oag_engine.host_name: "okta-oag-linux-ext-workernode-1-new.dev.aws.glic.com"
+        oktadev.oag_engine.ip_address: "10.212.5.105"
+        oktadev.type: "oag_engine"
+  spans: []
+- typename: oktadev:oag_cluster
+  attributes:
+    oktadev.oag_cluster.cluster_name: "OKTA-DEV"
+    telemetry.sdk.name: "oktadev"
+  metrics: 
+  - typename: oktadev:oag_cluster_heartbeat
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "1"
+    max: "100"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_cluster
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_cluster
+    severity: INFO
+    attributes:
+      level: info
+  relationships:
+    # - attributes:
+    #     oktadev.oag_node.host_name: "okta-oag-linux-int-workernode-1-new.dev.aws.glic.com"
+    #     oktadev.oag_node.ip_address: "10.212.8.239"
+    #     oktadev.oag_node.cluster_name: "OKTA-DEV"
+    #     oktadev.type: "oag_node"
+  spans: []
+- typename: oktadev:oag_node
+  attributes:
+    oktadev.oag_node.cluster_name: "OKTA-DEV"
+    oktadev.oag_node.host_name: "okta-oag-linux-int-workernode-1-new.dev.aws.glic.com"
+    oktadev.oag_node.http_scheme: "https"
+    oktadev.oag_node.ip_address: "10.212.8.239"
+    oktadev.oag_node.is_master_node: false
+    oktadev.oag_node.net_host_port: "447"
+    oktadev.oag_node.service_instance_id: "3"
+    oktadev.oag_node.service_name: "okta_test_node3"
+    telemetry.sdk.name: "oktadev"
+  metrics: 
+  - typename: oktadev:oag_ha_validation
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "1"
+    max: "10"
+  - typename: oktadev:oag_ha_last_sync
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "12"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_node
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_node
+    severity: INFO
+    attributes:
+      level: info
+  relationships: 
+    # - attributes:
+    #     oktadev.oag_node.host_name: "okta-oag-linux-int-workernode-1-new.dev.aws.glic.com"
+    #     oktadev.oag_node.ip_address: "10.212.8.239"
+    #     oktadev.type: "oag_engine"
+  spans: []
+- typename: oktadev:oag_cluster
+  attributes:
+    oktadev.oag_cluster.cluster_name: "OKTA-DEV"
+    telemetry.sdk.name: "oktadev"
+  metrics: 
+  - typename: oktadev:oag_cluster_heartbeat
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "1"
+    max: "100"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_cluster
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_cluster
+    severity: INFO
+    attributes:
+      level: info
+  relationships: 
+    # - attributes:
+    #     oktadev.oag_node.host_name: "okta-oag-linux-int-workernode-2-new.dev.aws.glic.com"
+    #     oktadev.oag_node.ip_address: "10.212.132.226"
+    #     oktadev.oag_node.cluster_name: "OKTA-DEV"
+    #     oktadev.type: "oag_node"
+  spans: []
+- typename: oktadev:oag_node
+  attributes:
+    oktadev.oag_node.cluster_name: "OKTA-DEV"
+    oktadev.oag_node.host_name: "okta-oag-linux-int-workernode-2-new.dev.aws.glic.com"
+    oktadev.oag_node.http_scheme: "https"
+    oktadev.oag_node.ip_address: "10.212.132.226"
+    oktadev.oag_node.is_master_node: false
+    oktadev.oag_node.net_host_port: "447"
+    oktadev.oag_node.service_instance_id: "4"
+    oktadev.oag_node.service_name: "okta_test_node4"
+    telemetry.sdk.name: "oktadev"
+  metrics: 
+  - typename: oktadev:oag_ha_validation
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "1"
+    max: "10"
+  - typename: oktadev:oag_ha_last_sync
+    contenttype: gauge
+    unit: ""
+    type: long
+    min: "0"
+    max: "12"
+  logs:
+  - body: hello world-0 for an entity of type oktadev:oag_node
+    severity: INFO
+    attributes:
+      level: info
+  - body: hello world-1 for an entity of type oktadev:oag_node
+    severity: INFO
+    attributes:
+      level: info
+  relationships: 
+    # - attributes:
+    #     oktadev.oag_engine.host_name: "okta-oag-linux-int-workernode-2-new.dev.aws.glic.com"
+    #     oktadev.oag_engine.ip_address: "10.212.132.226"
+    #     oktadev.type: "oag_engine"
+  spans: []
