@@ -5,7 +5,9 @@
     "view": "default",
     "element": {
         "instanceOf": "elements",
-        "elements": {
+        "elements": [
+        {
+            "title": "Properties",
             "instanceOf": {
                 "name": "inspectorWidget"
             },
@@ -45,8 +47,38 @@
                         }
                     }
                 ]
-            },
-            "title": "Properties"
+            }
+        },
+        {
+            "instanceOf": "html",
+            "style": { 
+                "display": "flex", 
+                "flex-direction": "column",
+                "align-items": "center",
+                "justify-content": "center",
+                "height": 34
+            }
+        },
+        {
+            "instanceOf": "html",
+            "style": {
+              "margin-bottom": "25px",
+              "border-bottom": "1px solid",
+              "padding-bottom": "10px"
+            }
+        },
+        {
+            "instanceOf": "oktadev:oag_cpuUsedArcGaugeInspectorWidgetTemplate"
+        },
+        {
+            "instanceOf": "html",
+            "style": {
+              "margin-bottom": "25px",
+              "border-bottom": "1px solid",
+              "padding-bottom": "10px"
+            }
         }
+
+    ]
     }
 }
