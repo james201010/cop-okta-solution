@@ -3,7 +3,7 @@
   "name": "oktadev:oag_diskUsedArcGaugeInspectorWidgetTemplate",
   "target": "*",
   "props": {
-    "title": "Filesystem Used Percentage",
+    "title": "File System Used Percentage",
     "maxValue": 100,
     "minValue": 0,
     "color": [

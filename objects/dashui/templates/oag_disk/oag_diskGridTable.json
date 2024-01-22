@@ -93,7 +93,7 @@
             {
                 "label": "File System Type",
                 "flex": 0,
-                "width": 150,
+                "width": 130,
                 "sortable": true,
                 "cell": {
                     "default": {
@@ -111,7 +111,7 @@
             {
                 "label": "Mountpoint",
                 "flex": 0,
-                "width": 150,
+                "width": 100,
                 "sortable": true,
                 "cell": {
                     "default": {
@@ -124,6 +124,35 @@
                             ]
                         }
                     }
+                }
+            },
+            {
+                "label": "Space Used %",
+                "flex": 0,
+                "sortable": true,
+                "width": 150,
+                "header": {
+                    "icon": {
+                        "name": "Action.Info",
+                        "tooltip": "Percentage of used space on the file system."
+                    }
+                },
+                "cell": {
+                    "default": {
+                        "instanceOf": "tooltip",
+                        "truncate": true,
+                        "trigger": {
+                            "instanceOf": "number",
+                            "path": "metrics(oktadev:oag_filesystem_used_perc, oktadev).value",
+                            "minimumFractionDigits": 0
+                        }
+                    }
+                },
+                "cellStyle": {
+                    "textAlign": "center"
+                },
+                "headerStyle": {
+                    "justifyContent": "center"
                 }
             }
         ],

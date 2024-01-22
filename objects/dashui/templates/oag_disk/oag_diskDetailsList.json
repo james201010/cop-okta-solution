@@ -20,7 +20,7 @@
                     {
                         "instanceOf": "card",
                         "props": {
-                            "title": "Filesystem Used Percentage",
+                            "title": "File System Used Percentage",
                             "style": {
                                "width": "33%",
                                "margin-left": "5px",
@@ -37,7 +37,7 @@
                     {
                         "instanceOf": "card",
                         "props": {
-                            "title": "Filesystem Available Percentage",
+                            "title": "File System Available Percentage",
                             "style": {
                                "width": "33%",
                                "margin-left": "5px",
@@ -54,7 +54,7 @@
                     {
                         "instanceOf": "card",
                         "props": {
-                            "title": "Filesystem Free Percentage",
+                            "title": "File System Free Percentage",
                             "style": {
                                "width": "33%",
                                "margin-left": "5px",
@@ -73,7 +73,7 @@
             {
                 "instanceOf": "card",
                 "props": {
-                    "title": "Filesystem Size (Bytes)"
+                    "title": "File System Size (Bytes)"
                 },
                 "elements": [
                     {
@@ -104,7 +104,7 @@
             {
                 "instanceOf": "card",
                 "props": {
-                    "title": "Filesystem Size (Gigabytes)"
+                    "title": "File System Size (Gigabytes)"
                 },
                 "elements": [
                     {
@@ -135,7 +135,7 @@
             {
                 "instanceOf": "card",
                 "props": {
-                    "title": "Filesystem Available (Bytes)"
+                    "title": "File System Available (Bytes)"
                 },
                 "elements": [
                     {
@@ -166,7 +166,7 @@
             {
                 "instanceOf": "card",
                 "props": {
-                    "title": "Filesystem Available (Gigabytes)"
+                    "title": "File System Available (Gigabytes)"
                 },
                 "elements": [
                     {
@@ -197,7 +197,7 @@
             {
                 "instanceOf": "card",
                 "props": {
-                    "title": "Filesystem Free (Bytes)"
+                    "title": "File System Free (Bytes)"
                 },
                 "elements": [
                     {
@@ -228,7 +228,7 @@
             {
                 "instanceOf": "card",
                 "props": {
-                    "title": "Filesystem Free (Gigabytes)"
+                    "title": "File System Free (Gigabytes)"
                 },
                 "elements": [
                     {

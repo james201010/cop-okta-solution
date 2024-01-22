@@ -3,7 +3,7 @@
   "name": "oktadev:oag_diskAvailableArcGaugeInspectorWidgetTemplate",
   "target": "*",
   "props": {
-    "title": "Filesystem Available Percentage",
+    "title": "File System Available Percentage",
     "maxValue": 100,
     "minValue": 0,
     "color": [

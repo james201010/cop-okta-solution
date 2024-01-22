@@ -89,6 +89,35 @@
                         }
                     }
                 }
+            },
+            {
+                "label": "Space Used %",
+                "flex": 0,
+                "sortable": true,
+                "width": 150,
+                "header": {
+                    "icon": {
+                        "name": "Action.Info",
+                        "tooltip": "Percentage of used space on the CPU."
+                    }
+                },
+                "cell": {
+                    "default": {
+                        "instanceOf": "tooltip",
+                        "truncate": true,
+                        "trigger": {
+                            "instanceOf": "number",
+                            "path": "metrics(oktadev:oag_cpu_perc_used, oktadev).value",
+                            "minimumFractionDigits": 0
+                        }
+                    }
+                },
+                "cellStyle": {
+                    "textAlign": "center"
+                },
+                "headerStyle": {
+                    "justifyContent": "center"
+                }
             }
         ],
         "onRowSingleClick": {

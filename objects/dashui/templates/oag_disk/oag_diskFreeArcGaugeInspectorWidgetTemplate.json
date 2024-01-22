@@ -3,7 +3,7 @@
   "name": "oktadev:oag_diskFreeArcGaugeInspectorWidgetTemplate",
   "target": "*",
   "props": {
-    "title": "Filesystem Free Percentage",
+    "title": "File System Free Percentage",
     "maxValue": 100,
     "minValue": 0,
     "color": [

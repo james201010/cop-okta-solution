@@ -70,6 +70,35 @@
                         }
                     }
                 }
+            },
+            {
+                "label": "Space Used %",
+                "flex": 0,
+                "sortable": true,
+                "width": 150,
+                "header": {
+                    "icon": {
+                        "name": "Action.Info",
+                        "tooltip": "Percentage of used memory."
+                    }
+                },
+                "cell": {
+                    "default": {
+                        "instanceOf": "tooltip",
+                        "truncate": true,
+                        "trigger": {
+                            "instanceOf": "number",
+                            "path": "metrics(oktadev:oag_memory_used_perc, oktadev).value",
+                            "minimumFractionDigits": 0
+                        }
+                    }
+                },
+                "cellStyle": {
+                    "textAlign": "center"
+                },
+                "headerStyle": {
+                    "justifyContent": "center"
+                }
             }
         ],
         "onRowSingleClick": {
