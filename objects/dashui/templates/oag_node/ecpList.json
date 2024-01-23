@@ -5,20 +5,48 @@
     "view": "default",
     "element": {
         "instanceOf": "ocpList",
-        "elements": {
-            "instanceOf": "card",
-            "props": {
+        "elements": [
+            {
+                "instanceOf": "html",
                 "style": {
-                    "height": "calc(100% - 298px)",
-                    "padding": 0,
-                    "width": "100%"
-                }
-            },
-            "elements": [
-                {
-                    "instanceOf": "oktadev:oag_nodeGridTable"
-                }
-            ]
-        }
+                    "display": "flex",
+                    "margin-top": 10,
+                    "flexDirection": "column",
+                    "gap": 0
+                },
+                "elements": [
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "style": {
+                                "height": 500,
+                                "margin-top": 10,
+                                "width": "100%"
+                            }
+                        },
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_nodeTopologyDetail"
+                            }
+                        ]
+                    },
+                    {
+                        "instanceOf": "card",
+                        "props": {
+                            "style": {
+                                "height": 300,
+                                "margin-top": 10,
+                                "width": "100%"
+                            }
+                        },
+                        "elements": [
+                            {
+                                "instanceOf": "oktadev:oag_nodeGridTable"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

@@ -1,7 +1,7 @@
 {
     "manifestVersion": "1.0.0",
     "name": "oktadev",
-    "solutionVersion": "0.0.89",
+    "solutionVersion": "0.0.99",
     "dependencies": [
         "fmm",
         "dashui"

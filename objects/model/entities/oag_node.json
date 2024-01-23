@@ -8,9 +8,20 @@
     "displayName": "oag_node",
     "attributeDefinitions": {
         "required": [
-           "host_name", "ip_address", "cluster_name"
+            "host_name",
+            "ip_address",
+            "cluster_name"
         ],
-        "optimized": ["host_name", "ip_address", "cluster_name", "net_host_port", "service_instance_id", "service_name", "http_scheme", "is_master_node"],
+        "optimized": [
+            "host_name",
+            "ip_address",
+            "cluster_name",
+            "net_host_port",
+            "service_instance_id",
+            "service_name",
+            "http_scheme",
+            "is_master_node"
+        ],
         "attributes": {
             "host_name": {
                 "type": "string",
@@ -51,15 +62,15 @@
         }
     },
     "lifecycleConfiguration": {
-        "purgeTtlInMinutes": 200,
-        "retentionTtlInMinutes": 116
+        "purgeTtlInMinutes": 201600,
+        "retentionTtlInMinutes": 200000
     },
     "metricTypes": [
         "oktadev:oag_ha_validation",
         "oktadev:oag_ha_last_sync"
     ],
     "associationTypes": {
-        "common:has": [            
+        "common:has": [
             "oktadev:oag_engine",
             "oktadev:oag_disk",
             "oktadev:oag_cpu",

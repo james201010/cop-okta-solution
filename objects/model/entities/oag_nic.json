@@ -8,9 +8,15 @@
     "displayName": "oag_nic",
     "attributeDefinitions": {
         "required": [
-            "host_name", "ip_address", "device_name"
+            "host_name",
+            "ip_address",
+            "device_name"
         ],
-        "optimized": ["host_name", "ip_address", "device_name"],
+        "optimized": [
+            "host_name",
+            "ip_address",
+            "device_name"
+        ],
         "attributes": {
             "host_name": {
                 "type": "string",
@@ -27,12 +33,12 @@
         }
     },
     "lifecycleConfiguration": {
-        "purgeTtlInMinutes": 200,
-        "retentionTtlInMinutes": 116
+        "purgeTtlInMinutes": 201600,
+        "retentionTtlInMinutes": 200000
     },
     "metricTypes": [
         "oktadev:oag_network_receive_drop",
         "oktadev:oag_network_receive_errs",
         "oktadev:oag_network_receive_bytes"
-    ] 
+    ]
 }

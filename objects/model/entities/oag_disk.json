@@ -8,9 +8,19 @@
     "displayName": "oag_disk",
     "attributeDefinitions": {
         "required": [
-            "host_name", "ip_address", "device_path", "file_sys_type", "mountpoint"
+            "host_name",
+            "ip_address",
+            "device_path",
+            "file_sys_type",
+            "mountpoint"
         ],
-        "optimized": ["host_name", "ip_address", "device_path", "file_sys_type", "mountpoint"],
+        "optimized": [
+            "host_name",
+            "ip_address",
+            "device_path",
+            "file_sys_type",
+            "mountpoint"
+        ],
         "attributes": {
             "host_name": {
                 "type": "string",
@@ -35,8 +45,8 @@
         }
     },
     "lifecycleConfiguration": {
-        "purgeTtlInMinutes": 200,
-        "retentionTtlInMinutes": 116
+        "purgeTtlInMinutes": 201600,
+        "retentionTtlInMinutes": 200000
     },
     "metricTypes": [
         "oktadev:oag_filesystem_size_bytes",
@@ -48,5 +58,5 @@
         "oktadev:oag_filesystem_used_perc",
         "oktadev:oag_filesystem_avail_perc",
         "oktadev:oag_filesystem_free_perc"
-    ] 
+    ]
 }

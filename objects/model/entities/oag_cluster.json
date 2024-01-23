@@ -10,7 +10,9 @@
         "required": [
             "cluster_name"
         ],
-        "optimized": ["cluster_name"],
+        "optimized": [
+            "cluster_name"
+        ],
         "attributes": {
             "cluster_name": {
                 "type": "string",
@@ -19,14 +21,14 @@
         }
     },
     "lifecycleConfiguration": {
-        "purgeTtlInMinutes": 200,
-        "retentionTtlInMinutes": 116
+        "purgeTtlInMinutes": 201600,
+        "retentionTtlInMinutes": 200000
     },
     "metricTypes": [
         "oktadev:oag_cluster_heartbeat"
     ],
     "associationTypes": {
-        "common:has": [            
+        "common:has": [
             "oktadev:oag_node"
         ]
     }

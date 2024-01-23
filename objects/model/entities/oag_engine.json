@@ -8,9 +8,13 @@
     "displayName": "oag_engine",
     "attributeDefinitions": {
         "required": [
-            "host_name", "ip_address"
+            "host_name",
+            "ip_address"
         ],
-        "optimized": ["host_name", "ip_address"],
+        "optimized": [
+            "host_name",
+            "ip_address"
+        ],
         "attributes": {
             "host_name": {
                 "type": "string",
@@ -23,8 +27,8 @@
         }
     },
     "lifecycleConfiguration": {
-        "purgeTtlInMinutes": 200,
-        "retentionTtlInMinutes": 116
+        "purgeTtlInMinutes": 201600,
+        "retentionTtlInMinutes": 200000
     },
     "metricTypes": [
         "oktadev:oag_nginx_active_conns",

@@ -1,0 +1,96 @@
+{
+    "kind": "template",
+    "name": "oktadev:oag_nodeTopologyDetail",
+    "target": "oktadev:oag_node",
+    "element": {
+        "instanceOf": "union",
+        "paths": [
+            "out(common:has).to(oktadev:oag_engine)",
+            "out(common:has).to(oktadev:oag_cpu)",
+            "out(common:has).to(oktadev:oag_memory)",
+            "out(common:has).to(oktadev:oag_disk)",
+            "out(common:has).to(oktadev:oag_nic)"
+        ],
+        "element": {
+            "instanceOf": "graph",
+            "fromPath": "in.from()",
+            "layout": "constellation",
+            "node": {
+                "healthBy": "status",
+                "element": {
+                    "instanceOf": "box",
+                    "style": {
+                        "borderRadius": "25px",
+                        "boxSizing": "border-box",
+                        "width": "50px",
+                        "height": "50px",
+                        "fontSize": "20px"
+                    },
+                    "elements": [
+                        {
+                            "config": {
+                                "style": {
+                                    "top": "55px",
+                                    "left": "-100px",
+                                    "width": "240px",
+                                    "display": "flex",
+                                    "position": "relative",
+                                    "flexDirection": "row",
+                                    "justifyContent": "center"
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "style": {
+                                        "maxWidth": "250px",
+                                        "lineHeight": "30px",
+                                        "marginLeft": "5px"
+                                    },
+                                    "element": {
+                                        "trigger": {
+                                            "path": [
+                                                "attributes(cpu_id)",
+                                                "attributes(device_path)",
+                                                "attributes(device_name)",
+                                                "attributes(host_name)"
+                                            ],
+                                            "instanceOf": "string"
+                                        },
+                                        "truncate": true,
+                                        "instanceOf": "tooltip"
+                                    },
+                                    "instanceOf": "html"
+                                }
+                            ],
+                            "instanceOf": "box"
+                        }
+                    ]
+                },
+                "boundary": {
+                    "type": "rect",
+                    "width": 50,
+                    "height": 50,
+                    "cornerRadius": 25
+                }
+            },
+            "edge": {
+                "healthBy": "health",
+                "focusNodeEdgesOnly": false
+            },
+            "events": {
+                "onNodeDoubleClick": {
+                    "type": "navigate.entity.detail",
+                    "expression": "$params"
+                },
+                "onNodeClick": {
+                    "type": "common.focusEntity",
+                    "expression": "$params"
+                },
+                "onEdgeSingleClick": {
+                    "type": "common.focusEntity",
+                    "expression": "$params"
+                }
+            }
+        }
+    }
+}

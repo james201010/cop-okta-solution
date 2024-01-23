@@ -8,9 +8,13 @@
     "displayName": "oag_memory",
     "attributeDefinitions": {
         "required": [
-            "host_name", "ip_address"
+            "host_name",
+            "ip_address"
         ],
-        "optimized": ["host_name", "ip_address"],
+        "optimized": [
+            "host_name",
+            "ip_address"
+        ],
         "attributes": {
             "host_name": {
                 "type": "string",
@@ -23,8 +27,8 @@
         }
     },
     "lifecycleConfiguration": {
-        "purgeTtlInMinutes": 200,
-        "retentionTtlInMinutes": 116
+        "purgeTtlInMinutes": 201600,
+        "retentionTtlInMinutes": 200000
     },
     "metricTypes": [
         "oktadev:oag_memory_total_bytes",
@@ -36,5 +40,5 @@
         "oktadev:oag_memory_used_perc",
         "oktadev:oag_memory_avail_perc",
         "oktadev:oag_memory_free_perc"
-    ] 
+    ]
 }

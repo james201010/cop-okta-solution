@@ -11,7 +11,7 @@
       "#bebf02",
       "red"
     ],    
-    "colorThresholds": [90,76,0],   
+    "colorThresholds": [0,76,90],   
     "format": "#", 
     "size": 160,
     "headingStyle": {},
