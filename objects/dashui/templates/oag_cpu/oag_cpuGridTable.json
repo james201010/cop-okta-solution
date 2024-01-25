@@ -91,7 +91,7 @@
                 }
             },
             {
-                "label": "Space Used %",
+                "label": "CPU % Used",
                 "flex": 0,
                 "sortable": true,
                 "width": 150,

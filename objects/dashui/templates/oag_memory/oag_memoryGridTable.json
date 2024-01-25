@@ -72,7 +72,7 @@
                 }
             },
             {
-                "label": "Space Used %",
+                "label": "Memory % Used",
                 "flex": 0,
                 "sortable": true,
                 "width": 150,
