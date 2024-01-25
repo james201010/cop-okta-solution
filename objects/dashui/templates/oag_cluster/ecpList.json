@@ -32,6 +32,22 @@
                     ]
                   },
                   {
+                    "instanceOf": "card",
+                    "props": {
+                        "title": "Default Cluster List",
+                        "style": {
+                            "height": 250,
+                            "width": "100%",
+                            "margin-top": 10
+                        }
+                    },
+                    "elements": [
+                        {
+                            "instanceOf": "oktadev:oag_clusterGridTable"
+                        }
+                    ]
+                  },
+                  {
                       "instanceOf": "card",
                       "props": {
                         "title": "Cluster Nodes​",
@@ -75,21 +91,6 @@
                       {
                         "instanceOf": "oktadev:oag_nodeLastSyncChart"
                       }
-                    ]
-                  },
-                  {
-                    "instanceOf": "card",
-                    "props": {
-                        "title": "Default Cluster List",
-                        "style": {
-                            "height": "175px",
-                            "width": "100%"
-                        }
-                    },
-                    "elements": [
-                        {
-                            "instanceOf": "oktadev:oag_clusterGridTable"
-                        }
                     ]
                   }
                 ]
